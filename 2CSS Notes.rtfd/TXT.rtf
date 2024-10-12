@@ -1,0 +1,375 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2759
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Bold;\f2\fswiss\fcharset0 Helvetica-Oblique;
+}
+{\colortbl;\red255\green255\blue255;\red34\green255\blue6;\red253\green139\blue9;\red0\green0\blue0;
+\red255\green255\blue255;\red255\green255\blue255;\red36\green255\blue255;\red0\green0\blue0;\red203\green42\blue5;
+\red253\green139\blue9;}
+{\*\expandedcolortbl;;\cssrgb\c0\c100000\c0;\cssrgb\c100000\c61456\c0;\cssrgb\c0\c1\c1;
+\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c4983\c100000\c100000;\cssrgb\c0\c1\c1;\cssrgb\c84173\c24610\c0;
+\cssrgb\c100000\c61456\c0;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid1\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid101\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid201\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid301\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}
+{\list\listtemplateid5\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid401\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid5}
+{\list\listtemplateid6\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{none\}}{\leveltext\leveltemplateid501\'00;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid6}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}{\listoverride\listid5\listoverridecount0\ls5}{\listoverride\listid6\listoverridecount0\ls6}}
+\margl1440\margr1440\vieww8440\viewh18000\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 CSS Section 1 Notes \
+Defining CSS (Cascading Style Sheets) \
+CSS is a programming language used to describe the presentation of a document such as HTML. CSS is used to customize Layout, font, colour, positioning, space, sizing, transitions etc. and without having to completely changing the site content. [CSS allows separation of presentation and content.]\
+\
+Why would we use CSS? \
+- Faster workflow and efficient because you can make changes across an entire webpage instead of editing a single element\
+- Website speed as CSS manages decorative elements by reducing size and allows webpage to run more smooth\
+- Can reorganize to suit the users screen and resolution eg. TV, computer\
+- Flexibility: organizes elements in a way that ensures that they are appropriate for the device they are being viewed on.\
+\
+CSS applied to html \
+\ul Inline Styling:\ulnone  directly applies changes using the <style> attribute \cf2 (***highest priority, may override other styling)\cf0 \
+\ul Internal style:\ulnone  adding style element to the head section of the document. affects the entire page that it is applied.\cf2  (***second priority)  \cf0 \
+\ul external styling:\ulnone  can be placed in a separate external file usually beside an html file. affects the entire document as a whole providing a more uniform visual concept to the webpage. \
+\
+\ul Inline \ulnone eg. <h2 style=\'93color:blue;\'94>Inline Styling</h2> \
+\ul Internal\ulnone  eg. <style>\
+		h2 \{color: #7bc2bd;\} \
+	         </style>\
+\
+All h2 headers will turn this colour \
+\
+\ul External\ulnone  eg. <head>\
+<link rel=\'93stylesheet\'94 href=\'93style.css\'94> \
+</head> \
+\cf2 make sure to put the code within a head tag and add the links to each HTML document\cf0 \
+\
+
+\f1\b CSS Selectors and Properties
+\f0\b0 \
+Selector is a pattern used to select the content or elements you want to style. \
+Three types of selectors \
+\ul Class selectors:\ulnone  allow to isolate and style groups of HTML elements based on their identified class \
+syntax eg. \cf3  [full stop/period (.)] + [class name]\cf0 \
+\cf3 <p class=\'93roboclass\'94>This paragraph will have the roboclass style.</p>\
+<p> This paragraph WILL NOT have the roboclass style.</p> \cf4  (attribute syntax is not used) \cf0 \
+class selector code structure eg. .\cf3 intro \{\
+					color: silver; \
+           				\}\cf0 \
+\
+\ul ID selectors : \ulnone allow to isolate a single HTML element based on their ID \
+syntax eg. \cf3 [hash/pound (#)] + [ID name]. \
+<h1 id=\'93idselector\'94> This paragraph WILL NOT have the idSElector style. </h1> \cf4 (due to CSS being case sensitive the ID selector would not be inherited by <h1>). \cf3 \
+<h2 id=\'93idSelector\'94> This paragraph will have the roboclass style.</h2>\
+\cf4 idSelector code structure eg.\cf3  #idSelector \{\
+					background-colour: lightgreen; \
+				    \} \cf4 \
+\cf0 \
+\ul Element selectors: \ulnone allows to isolate a group of HTML elements based on the element\'92s name, such as all the <h1> or all the <p>.\
+syntax eg. [element name] \
+element selector code structure eg. \cf3 h1 \{\
+					   color: blue;\
+					   \}\
+\cf4 (all the h1 elements would be coloured blue)\cf0 \
+						\
+\ul CSS comments\ulnone  are often used, usually written in the code without displaying them on the file. \
+CSS comment syntax eg.\cf3  [forwardslash (/)] + [astericks]+[your comment+[astericks]+[forward slash (/)]. \
+\
+\cf4 eg. \cf3 <style> \
+/*This is a comment*/\
+</style> \
+\
+
+\f1\b \cf4 Element Size and Fonts\
+
+\f0\b0 font-size, font-family (font type), font-style (bold, italics, oblique), font-weight (thickness)\
+\
+\ul pixels and points:\ulnone  pixels are more often used in programming and appear more smaller. default text size in HTML is 16 pixels (px) otherwise 12 points (pts)\
+\
+font family, style, weight eg. \
+\cf3 h2 \{\
+font-family: serif; \
+font-style: italic;\
+font-weight: bold;\
+\}\
+\
+\cf4 \ul \ulc4 text-align\ulnone : Left, Right, Center and Justify values are available \
+eg. \
+\cf3 h1 \{\
+text-align: center;\
+\}\
+p \{\
+text-align: left;\
+\{\cf4 \
+or you can combine div with different classes such as\cf3 \
+ div.center \{\
+         text-align: center;\
+         \}\
+\cf4 \
+\ul text-transform\ulnone : controls text case and capitalization \
+uppercase (sets all to UPPER), lowercase (sets all to lower), Capitalize (capitalizes the first letter of all words)\
+\
+\ul Element size: \ulnone Width and Height \
+if image is in a class called large-image, the following declaration block would ensure that it is set to 850 px wide. \
+eg. \cf3 <style> \
+.large-image \{ \
+width: 850px; \
+\} \
+</style>\
+\cf0 \
+
+\f1\b Colour\
+
+\f0\b0 RGB is usually used in electronic displays because it is based on how light creates colour (three numbers from 0-255). There are 16,777,216 colours \
+Hexadecimal #RRGGBB has same colour range as RGB\
+RGBA has an additional Alpha value which defines opacity of the colour \
+HSL (Hue, Saturation, Lightness) represented through a colour wheel \
+HSLA includes the addition of Alpha or opacity\
+Modern browsers sometimes have predefined colours\
+CMYK - Cyan, Magenta, Yellow, Black (for print materials) \
+\
+RGB (0, 0, 0)=black (255, 255, 255)=white (255, 0 , 0)=red (0, 255, 0)=green (0, 0, 255)=blue\
+Adding transparency looks like rgba (255, 109, 109, 0.5) \
+\
+Hex #000000=black #ffffff=white #ff0000=red #00ff00=green #0000ff=blue \
+\
+HSL is expressed in degrees (0-359) \
+hsl (0, 109%, 109%) \
+you can also make an element fully transparent \
+background-colour: transparent;\
+<div  class=\'93brick__br\'94></div> \
+color: transparent; \
+\
+background-colour: \
+background-image: \
+\
+Styling buttons \
+colour: \
+background-colour:\
+border-color:\
+\
+\ul Pseudo-classes\ulnone  (keywords for unique state of an element such as changes when hovering over an object or when link has been visited) \ul and Hovering \
+\
+\ulnone These elements are added before the style brackets \
+:hover  \
+:visited\
+:active\
+:invalid \
+\ul \
+\ulnone eg. \cf3 .button:hover \{\
+background-colour: light blue \
+\} \cf0 \
+\
+Invalid vs. Valid Pseudo Classes \
+When you forget to fill in a form a valid or invalid form will be triggered. \
+\
+An invalid form looks like\
+eg. \cf3 input:invalid \{\
+border: 4px solid #FF0000\
+\} \cf0 \
+\
+Pseudo-classes for links usually have multiple states that look different during \
+:link, :hover, :visited, :active \
+\
+This particular setup declares \
+hover pseudo-class set all p elements to light blue \
+\cf3 p:hover \{\
+background-colour: light blue;\
+\} \cf0 \
+\ul \
+Margin, Borders, and Padding to the House\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \ulnone {{\NeXTGraphic 4.png \width9975 \height4455 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \
+margin-left, margin-right, margin-top, margin bottom (just margin will also work and apply all the same px value around the item\
+\
+Shorthand margin declarations is where you can set different margins within a single declaration. (*make sure to write the set of margins in clockwise order) \
+ top (5px), right and left (10 px) bottom (15px)\
+would look like eg. \cf3 margin: 5px 10px 15px; \cf0  \
+\
+\
+Margin width: Length (px, em, pt etc.), Percent (%), (Auto) \
+\cf3 \
+h2 \{\
+margin: 100px 350px; \
+\} \cf0 \
+first value applies equal margins to top and bottom and second applies to left and right margins. \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf0 \ul \ulc0 \
+Borders\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls1\ilvl0\cf4 \cb5 \ulnone 		\expnd0\expndtw0\kerning0
+border-width\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-color\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-style\
+\ls1\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-radius\kerning1\expnd0\expndtw0 \ul \ulc4 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf4 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf4 \expnd0\expndtw0\kerning0
+\ulnone Width
+\f0\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls2\ilvl0\cf4 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-top-width\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-right-width\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-bottom-width\
+\ls2\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-left-width\
+\pard\pardeftab720\partightenfactor0
+\cf4 \
+
+\f1\b Colour
+\f0\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls3\ilvl0\cf4 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-top-color\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-right-color\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-bottom-color\
+\ls3\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-left-color\
+\pard\pardeftab720\partightenfactor0
+\cf4 \
+
+\f1\b Style
+\f0\b0 \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls4\ilvl0\cf4 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-top-style\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-right-style\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-bottom-style\
+\ls4\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-left-style\
+\pard\pardeftab720\partightenfactor0
+\cf4 \
+
+\f1\b Radius
+\f0\b0  (rounded corners)\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls5\ilvl0\cf4 \kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-top-left\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-top-right\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-bottom-right\
+\ls5\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+border-bottom-l\cf4 \cb6 e\cf0 \cb1 \kerning1\expnd0\expndtw0 ft\ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \ulc0 \
+\ulnone Shorthand border declarations are also available with colour and size \
+\
+Length (px, em, pt etc.) \
+Pre-defined value: (thin, medium, thick) \
+\
+Other Border-style properties \
+\pard\tx220\tx720\pardeftab720\li720\fi-720\partightenfactor0
+\ls6\ilvl0\cf4 \cb6 		\expnd0\expndtw0\kerning0
+dotted\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+dashed\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+solid\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+double\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+groove\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+ridge\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+inset\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+outset\
+\ls6\ilvl0\kerning1\expnd0\expndtw0 		\expnd0\expndtw0\kerning0
+none\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf0 \cb1 \kerning1\expnd0\expndtw0 hidden\
+\pard\tx720\pardeftab720\partightenfactor0
+\cf0 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \ulnone eg. {{\NeXTGraphic 13.png \width9975 \height4455 \appleattachmentpadding0 \appleembedtype0 \appleaqc
+}¬}\ul \
+\
+Border color \ulnone is set using the border-color value. Border color property follows the same rules as border width and border style properties. \
+\
+border-radius determines the curvature of the corners of a border\
+Predefine value: round, rounder, roundest\
+Length: (px, em, pt) \
+Percent \
+\
+Shorthand border-radius declarations work the same as the others \
+\
+0 property values (element#id \{ property: 0; \}) \
+\
+\ul Padding\ulnone  = empty space between the HTML element and the border. (inside the border) \
+padding-left, padding-right, padding-top, padding-bottom \
+Shorthand padding declarations are same as the others. \
+Length\
+Percent\
+\
+Padding property can be assigned to the value (inherit) meaning the value of the parent element is assigned to the value of the child. \
+eg. \cf3 span \{ \
+padding: 25px; \
+\} \
+\
+.extra span \{\
+padding: inherit; \
+\} \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf4 \ul \ulc4 Debugging\cf0 \ulnone \
+\
+A bug in computer programming is an error, failure, or fault in coding. \
+Debuggers can identify the exact location or probable cause of a bug in a fraction of the time. \
+\
+Two major errors that developers can encounter. \
+\
+\ul 1. Syntax errors\ulnone  = mistakes in 
+\f2\i \cf7 how\cf0  
+\f0\i0 the code is written (syntax is the format in which programming languages are organized and syntax errors is when the format is violated. )\
+\ul 2. Logical errors \ulnone  = mistakes in 
+\f2\i \cf7 what\cf0  
+\f0\i0 code is written (when a code performs differently than intended.) \
+\
+Syntax errors on \cf9 HTML browsers are fixed automatically and the fix may result in a different output than intended\cf0 . \
+What do they look like in HTML? eg. an opening tag may have no closing tag \
+or a declaration may not include the (;) semi colon therefore syntax error would occur. \
+\
+Logical errors are mistakes in 
+\f2\i what
+\f0\i0  code is written \
+eg. When you use the wrong HTML tag, misspelling text content, Enter an incorrect colour value, or using the wrong property. \
+(*** it is important to fix syntax errors before fixing logical errors as it will be difficult to identify obvious logical errors). \
+\
+\cf10 <h1> 4+4=16 </h1>\cf0  would be an logical error because the plus (+) value should be a multiply (x) value. \
+\
+DEBUGGING TOOLS \
+Google Chrome has a tool called (DevTools) which can help debug. \
+open the tool pressing \cf2 Ctrl + Shift + I\cf0  or \cf2 Option + Command + I\cf0  for Mac and go to the Elements tab. Go to <body> element \
+\
+Validating HTML code \
+W3C Markup Validation Service is a strong tool used to identify errors and validates in HTML code. \
+Step 1. Copy the URL for the page you want to validate (Validate by URI tab) \
+Step 2. Upload the file you want to validate (Validate by File Upload tab) \
+Step 3. Directing inputing (copy and paste code through the Validate by Direct input tab) \
+\
+\
+\
+\ul \
+\
+\
+\
+\
+\
+\ulnone \
+}
